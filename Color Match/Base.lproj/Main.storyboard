@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="134.48275862068968"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="3BN-1Y-twf">
             <objects>
-                <viewController id="3rT-PM-anL" sceneMemberID="viewController">
+                <viewController id="3rT-PM-anL" customClass="GameViewController" customModule="Color_Match" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dpZ-gN-69F"/>
                         <viewControllerLayoutGuide type="bottom" id="t2d-Ep-nXl"/>
@@ -67,12 +67,21 @@
                     <view key="view" contentMode="scaleToFill" id="pPE-lF-EO4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uX-Zg-GGH">
+                                <rect key="frame" x="100" y="78" width="174" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yO-7C-HQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="134"/>
+            <point key="canvasLocation" x="1069.5999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

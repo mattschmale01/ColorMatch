@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C947AF611DEF811C002E933C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947AF601DEF811C002E933C /* GameViewController.swift */; };
 		C9B3B6FD1DEE978100941CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */; };
 		C9B3B6FF1DEE978100941CD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6FE1DEE978100941CD5 /* ViewController.swift */; };
 		C9B3B7021DEE978100941CD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B3B7001DEE978100941CD5 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C947AF601DEF811C002E933C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C9B3B6F91DEE978100941CD5 /* Color Match.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Match.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9B3B6FE1DEE978100941CD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C947AF5C1DEF7FAB002E933C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C947AF5E1DEF7FBC002E933C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C947AF5F1DEF7FC4002E933C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3B6FE1DEE978100941CD5 /* ViewController.swift */,
+				C947AF601DEF811C002E933C /* GameViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		C9B3B6F01DEE977F00941CD5 = {
 			isa = PBXGroup;
 			children = (
@@ -99,8 +124,10 @@
 		C9B3B6FB1DEE978100941CD5 /* Color Match */ = {
 			isa = PBXGroup;
 			children = (
+				C947AF5F1DEF7FC4002E933C /* Controller */,
+				C947AF5E1DEF7FBC002E933C /* View */,
+				C947AF5C1DEF7FAB002E933C /* Model */,
 				C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */,
-				C9B3B6FE1DEE978100941CD5 /* ViewController.swift */,
 				C9B3B7001DEE978100941CD5 /* Main.storyboard */,
 				C9B3B7061DEE978100941CD5 /* Assets.xcassets */,
 				C9B3B7081DEE978100941CD5 /* LaunchScreen.storyboard */,
@@ -262,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C947AF611DEF811C002E933C /* GameViewController.swift in Sources */,
 				C9B3B6FF1DEE978100941CD5 /* ViewController.swift in Sources */,
 				C9B3B7051DEE978100941CD5 /* Color_Match.xcdatamodeld in Sources */,
 				C9B3B6FD1DEE978100941CD5 /* AppDelegate.swift in Sources */,
@@ -509,6 +537,7 @@
 				C9B3B7261DEE978100941CD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9B3B7271DEE978100941CD5 /* Build configuration list for PBXNativeTarget "Color MatchTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +546,7 @@
 				C9B3B7291DEE978100941CD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9B3B72A1DEE978100941CD5 /* Build configuration list for PBXNativeTarget "Color MatchUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +555,7 @@
 				C9B3B72C1DEE978100941CD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
