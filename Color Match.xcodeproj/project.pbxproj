@@ -16,6 +16,7 @@
 		C9B3B70A1DEE978100941CD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B3B7081DEE978100941CD5 /* LaunchScreen.storyboard */; };
 		C9B3B7151DEE978100941CD5 /* Color_MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B7141DEE978100941CD5 /* Color_MatchTests.swift */; };
 		C9B3B7201DEE978100941CD5 /* Color_MatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B71F1DEE978100941CD5 /* Color_MatchUITests.swift */; };
+		D096D8E41DEF856E006A1FDF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D096D8E31DEF856E006A1FDF /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C9B3B71B1DEE978100941CD5 /* Color MatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Color MatchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B3B71F1DEE978100941CD5 /* Color_MatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_MatchUITests.swift; sourceTree = "<group>"; };
 		C9B3B7211DEE978100941CD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D096D8E31DEF856E006A1FDF /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				C9B3B6FE1DEE978100941CD5 /* ViewController.swift */,
 				C947AF601DEF811C002E933C /* GameViewController.swift */,
+				D096D8E31DEF856E006A1FDF /* Game.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C947AF611DEF811C002E933C /* GameViewController.swift in Sources */,
+				D096D8E41DEF856E006A1FDF /* Game.swift in Sources */,
 				C9B3B6FF1DEE978100941CD5 /* ViewController.swift in Sources */,
 				C9B3B7051DEE978100941CD5 /* Color_Match.xcdatamodeld in Sources */,
 				C9B3B6FD1DEE978100941CD5 /* AppDelegate.swift in Sources */,
