@@ -10,6 +10,12 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    var isAlive = true
+    var timer: Timer!
+    
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,5 +56,19 @@ class GameViewController: UIViewController {
     }
     
     @IBOutlet weak var colorLabel: UILabel!
+    
+    
+    
+    
+    
+    
+func startTimer(){
+        if timer != nil{
+            timer.invalidate()
+        }
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: Selector(" "), userInfo: nil, repeats: true)
+    }
+
     
 }
