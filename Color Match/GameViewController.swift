@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
         
     }
 
+    @IBOutlet weak var colorLabel: UILabel!
     
 
 }
