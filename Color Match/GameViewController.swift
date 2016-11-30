@@ -12,12 +12,19 @@ class GameViewController: UIViewController {
 
     var isAlive = true
     var timer: Timer!
-    
+    var rngNum = arc4random(7)
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        while(isAlive){
+           colorLabel.text =
+        }
+        
 
     }
     
@@ -49,9 +56,13 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func noBtn(_ sender: Any) {
+        
      
     }
     @IBAction func yesBtn(_ sender: Any) {
+        if isAlive {
+            
+        }
         
     }
     
