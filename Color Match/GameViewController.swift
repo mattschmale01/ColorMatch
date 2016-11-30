@@ -16,7 +16,11 @@ class GameViewController: UIViewController {
         
         
     }
-
+    @IBAction func noBtn(_ sender: Any) {
+    }
+    @IBAction func yesBtn(_ sender: Any) {
+    }
+    
     @IBOutlet weak var colorLabel: UILabel!
     
 
