@@ -112,6 +112,7 @@
                     </view>
                     <connections>
                         <outlet property="colorLabel" destination="8uX-Zg-GGH" id="hnS-Zj-L84"/>
+                        <outlet property="highScoreLbl" destination="j4c-ev-hxC" id="W1X-wQ-vZu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yO-7C-HQF" userLabel="First Responder" sceneMemberID="firstResponder"/>

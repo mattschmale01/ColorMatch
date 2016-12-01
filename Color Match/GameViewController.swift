@@ -10,27 +10,55 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    // Connect labels
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var highScoreLbl: UILabel!
+    
+    // Declaring game variables
     var isAlive = true
+    var score = 0
     var timer: Timer!
-    var rngNum = arc4random(7)
+    var curText: String = ""
+    var curColor: String = ""
     
-    
+    // Color maps
+    let colorNameMap = ["blue", "red", "green"]
+    let colorHexMap = ["#0080ff", "#ff0000", "#00ff00"]
 
+    // Onload function
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        while(isAlive){
-           colorLabel.text =
-        }
-        
-
+        highScoreLbl.text = String(score)
+        newPlay()
     }
     
-    // Color maps
-    var colorNameMap = ["blue", "red", "green"]
-    var colorHexMap = ["#0080ff", "#ff0000", "#00ff00"]
+    // Func: adds points to high score label
+    func addPoints() {
+        score += 1
+        highScoreLbl.text = String(score)
+    }
+    
+    // Func: ends game
+    func gameOver() {
+        highScoreLbl.text = "Game over"
+        highScoreLbl.textColor = UIColor.red
+        isAlive = false
+    }
+    
+    // Func: generates new text and color
+    func newPlay() {
+        curText = colorNameMap[randInt(range: 3)]
+        colorLabel.text = curText
+        
+        curColor = colorHexMap[randInt(range: 3)]
+        colorLabel.textColor = hexStringToUIColor(hex: curColor)
+    }
+    
+    // Func: generates a random number
+    func randInt(range:Int) -> Int {
+        return Int(arc4random_uniform(UInt32(range)))
+    }
     
     // Func: converts hexes to UIColor object
     func hexStringToUIColor (hex:String) -> UIColor {
@@ -56,30 +84,32 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func noBtn(_ sender: Any) {
-        
-     
+        if isAlive {
+            if colorNameMap.index(of: curText) != colorHexMap.index(of: curColor) {
+                addPoints()
+                newPlay()
+            } else {
+                gameOver()
+            }
+        }
     }
     @IBAction func yesBtn(_ sender: Any) {
         if isAlive {
-            
+            if colorNameMap.index(of: curText) == colorHexMap.index(of: curColor) {
+                addPoints()
+                newPlay()
+            } else {
+                gameOver()
+            }
         }
-        
     }
     
-    @IBOutlet weak var colorLabel: UILabel!
-    
-    
-    
-    
-    
-    
-func startTimer(){
-        if timer != nil{
+    // func: start the timer thingy
+    func startTimer() {
+        if timer != nil {
             timer.invalidate()
         }
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: Selector(" "), userInfo: nil, repeats: true)
     }
-
-    
 }
