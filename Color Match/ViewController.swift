@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        highScoreLbl.text = "High Score: " + String(GameViewController.score)
     }
 
     override func didReceiveMemoryWarning() {
