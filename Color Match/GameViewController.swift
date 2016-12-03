@@ -14,6 +14,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var highScoreLbl: UILabel!
     
+    @IBOutlet weak var yesBtn: UIButton!
+    @IBOutlet weak var noBtn: UIButton!
+    
     // Declaring game variables
     let MOVETIME = 3
     var score = 0
@@ -31,10 +34,22 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        uiUpdates()
+        
         highScoreLbl.text = String(score)
         currTime = MOVETIME
         startTimer()
         newPlay()
+    }
+    
+    //Func: Loads UI Updates
+    func uiUpdates(){
+        yesBtn.layer.cornerRadius = 5.0
+        noBtn.layer.cornerRadius = 5.0
+        
+        
+        yesBtn.alpha = 0.5
+        noBtn.alpha = 0.5
     }
     
     // Func: adds points to high score label

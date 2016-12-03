@@ -117,6 +117,8 @@
                     <connections>
                         <outlet property="colorLabel" destination="8uX-Zg-GGH" id="hnS-Zj-L84"/>
                         <outlet property="highScoreLbl" destination="j4c-ev-hxC" id="W1X-wQ-vZu"/>
+                        <outlet property="noBtn" destination="Kp0-K4-Gqr" id="rdw-Ec-9tf"/>
+                        <outlet property="yesBtn" destination="2AU-90-hxb" id="Hw4-2I-4B7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yO-7C-HQF" userLabel="First Responder" sceneMemberID="firstResponder"/>
