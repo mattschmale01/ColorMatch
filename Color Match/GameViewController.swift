@@ -47,10 +47,7 @@ class GameViewController: UIViewController {
         yesBtn.layer.cornerRadius = 5.0
         noBtn.layer.cornerRadius = 5.0
         
-        
-        yesBtn.alpha = 0.5
-        noBtn.alpha = 0.5
-    }
+        }
     
     // Func: adds points to high score label
     func addPoints() {
