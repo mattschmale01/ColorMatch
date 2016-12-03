@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var highScoreLbl: UILabel!
+    static var highScore = 0
 
     @IBAction func onBtnPress(_ sender: Any) {
         
@@ -24,7 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        highScoreLbl.text = "High Score: " + String(GameViewController.score)
+        highScoreLbl.text = "High Score: " + String(ViewController.highScore)
     }
 
     override func didReceiveMemoryWarning() {

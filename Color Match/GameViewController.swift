@@ -15,7 +15,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var highScoreLbl: UILabel!
     
     // Declaring game variables
-    static var score = 0
+    var score = 0
     var isAlive = true
     var timer: Timer!
     var curText: String = ""
@@ -29,21 +29,26 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        highScoreLbl.text = String(GameViewController.score)
+        highScoreLbl.text = String(score)
         newPlay()
     }
     
     // Func: adds points to high score label
     func addPoints() {
-        GameViewController.score += 1
-        highScoreLbl.text = String(GameViewController.score)
+        score += 1
+        highScoreLbl.text = String(score)
     }
     
     // Func: ends game
     func gameOver() {
-        highScoreLbl.text = "Game over! Score: " + String(GameViewController.score)
+        highScoreLbl.text = "Game over! Score: " + String(score)
         highScoreLbl.textColor = UIColor.red
         isAlive = false
+        
+        if score > ViewController.highScore {
+            ViewController.highScore = score
+        }
+        score = 0
     }
     
     // Func: generates new text and color
