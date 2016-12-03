@@ -18,11 +18,11 @@ class GameViewController: UIViewController {
     @IBOutlet weak var noBtn: UIButton!
     
     // Declaring game variables
-    let MOVETIME = 3
+    let MOVETIME = 1.5
     var score = 0
     var isAlive = true
     var timer: Timer!
-    var currTime: Int?
+    var currTime: Double?
     var curText: String = ""
     var curColor: String = ""
     
@@ -40,6 +40,7 @@ class GameViewController: UIViewController {
         currTime = MOVETIME
         startTimer()
         newPlay()
+        score = 0
     }
     
     //Func: Loads UI Updates
@@ -65,7 +66,6 @@ class GameViewController: UIViewController {
         if score > ViewController.highScore {
             ViewController.highScore = score
         }
-        score = 0
     }
     
     // Func: generates new text and color
@@ -127,7 +127,7 @@ class GameViewController: UIViewController {
     }
     
     func countDown() {
-        currTime! -= 1
+        currTime! -= 0.5
         if currTime! <= 0 {
             gameOver()
         }
@@ -139,6 +139,6 @@ class GameViewController: UIViewController {
             timer.invalidate()
         }
         
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(GameViewController.countDown), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(GameViewController.countDown), userInfo: nil, repeats: true)
     }
 }
