@@ -15,9 +15,11 @@ class GameViewController: UIViewController {
     @IBOutlet weak var highScoreLbl: UILabel!
     
     // Declaring game variables
+    let MOVETIME = 3
     var score = 0
     var isAlive = true
     var timer: Timer!
+    var currTime: Int?
     var curText: String = ""
     var curColor: String = ""
     
@@ -30,6 +32,8 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         highScoreLbl.text = String(score)
+        currTime = MOVETIME
+        startTimer()
         newPlay()
     }
     
@@ -37,6 +41,7 @@ class GameViewController: UIViewController {
     func addPoints() {
         score += 1
         highScoreLbl.text = String(score)
+        currTime = MOVETIME
     }
     
     // Func: ends game
@@ -109,12 +114,19 @@ class GameViewController: UIViewController {
         }
     }
     
+    func countDown() {
+        currTime! -= 1
+        if currTime! <= 0 {
+            gameOver()
+        }
+    }
+    
     // func: start the timer thingy
     func startTimer() {
         if timer != nil {
             timer.invalidate()
         }
         
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: Selector(" "), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(GameViewController.countDown), userInfo: nil, repeats: true)
     }
 }
