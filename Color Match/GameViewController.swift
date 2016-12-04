@@ -13,12 +13,13 @@ class GameViewController: UIViewController {
     // Connect labels
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var highScoreLbl: UILabel!
+    @IBOutlet weak var timeLeftLbl: UILabel!
     
     @IBOutlet weak var yesBtn: UIButton!
     @IBOutlet weak var noBtn: UIButton!
     
     // Declaring game variables
-    let MOVETIME = 1.5
+    let MOVETIME = 2.0
     var score = 0
     var isAlive = true
     var timer: Timer!
@@ -127,8 +128,10 @@ class GameViewController: UIViewController {
     }
     
     func countDown() {
-        currTime! -= 0.5
+        currTime! -= 0.1
+        timeLeftLbl.text = String(Double(round(10*currTime!)/10))
         if currTime! <= 0 {
+            timeLeftLbl.text = "Time's up!"
             gameOver()
         }
     }
@@ -139,6 +142,6 @@ class GameViewController: UIViewController {
             timer.invalidate()
         }
         
-        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(GameViewController.countDown), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(GameViewController.countDown), userInfo: nil, repeats: true)
     }
 }
