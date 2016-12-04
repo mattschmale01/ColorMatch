@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var noBtn: UIButton!
     
     // Declaring game variables
-    let MOVETIME = 2.0
+    let MOVETIME = 1.0
     var score = 0
     var isAlive = true
     var timer: Timer!
@@ -28,7 +28,7 @@ class GameViewController: UIViewController {
     var curColor: String = ""
     
     // Color maps
-    let colorNameMap = ["blue", "red", "green"]
+    let colorNameMap = ["blue", "red", "green",]
     let colorHexMap = ["#0080ff", "#ff0000", "#00ff00"]
 
     // Onload function
@@ -67,6 +67,9 @@ class GameViewController: UIViewController {
         if score > ViewController.highScore {
             ViewController.highScore = score
         }
+        
+        UserDefaults.standard.setValue("GameViewController.highScore", forKey: "highScore")
+        UserDefaults.standard.synchronize()
     }
     
     // Func: generates new text and color
@@ -116,6 +119,7 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func yesBtn(_ sender: Any) {
         if isAlive {
             if colorNameMap.index(of: curText) == colorHexMap.index(of: curColor) {
@@ -127,6 +131,7 @@ class GameViewController: UIViewController {
         }
     }
     
+    //Func: Count down timer
     func countDown() {
         currTime! -= 0.1
         timeLeftLbl.text = String(Double(round(10*currTime!)/10))
@@ -136,7 +141,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    // func: start the timer thingy
+    //Func: Start the timer
     func startTimer() {
         if timer != nil {
             timer.invalidate()
