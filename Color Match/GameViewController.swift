@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var yesBtn: UIButton!
     @IBOutlet weak var noBtn: UIButton!
+    @IBOutlet weak var backBtn: UIButton!
     
     // Declaring game variables
     let MOVETIME = 1.0
@@ -59,7 +60,7 @@ class GameViewController: UIViewController {
     func uiUpdates(){
         yesBtn.layer.cornerRadius = 5.0
         noBtn.layer.cornerRadius = 5.0
-        
+        backBtn.setTitleColor(UIColor.black, for: .normal)
         }
     
     // Func: adds points to high score label
@@ -73,6 +74,7 @@ class GameViewController: UIViewController {
     func gameOver() {
         highScoreLbl.text = "Game over! Score: " + String(score)
         highScoreLbl.textColor = UIColor.red
+        backBtn.setTitleColor(UIColor.red, for: .normal)
         isAlive = false
         checkHighScore(CurrentScore: score)
         
