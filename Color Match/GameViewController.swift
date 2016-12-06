@@ -28,7 +28,7 @@ class GameViewController: UIViewController {
     var curColor: String = ""
     
     // Color maps
-    let colorNameMap = ["blue", "red", "green",]
+    let colorNameMap = ["Blue", "Red", "Green",]
     let colorHexMap = ["#0080ff", "#ff0000", "#00ff00"]
 
     // Onload function
@@ -121,6 +121,8 @@ class GameViewController: UIViewController {
                 addPoints()
                 newPlay()
             } else {
+                timer.invalidate()
+                timeLeftLbl.text = ""
                 gameOver()
             }
         }
@@ -132,7 +134,9 @@ class GameViewController: UIViewController {
                 addPoints()
                 newPlay()
             } else {
+                timer.invalidate()
                 gameOver()
+                timeLeftLbl.text = ""
             }
         }
     }
@@ -144,6 +148,7 @@ class GameViewController: UIViewController {
         if currTime! <= 0 {
             timeLeftLbl.text = "Time's up!"
             gameOver()
+            
         }
     }
     

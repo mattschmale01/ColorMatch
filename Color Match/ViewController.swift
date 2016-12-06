@@ -20,13 +20,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
             if let scoreData = UserDefaults.standard.integer(forKey: "SCORE") as Int?{
                 highScoreLbl.text = "High Score: \(scoreData)"
             } else {
                 highScoreLbl.text = "Play to Begin!"
             }
         
+        highScoreLbl.layer.cornerRadius = 5.0
     }
     
     override func didReceiveMemoryWarning() {
