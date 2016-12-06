@@ -34,14 +34,25 @@ class GameViewController: UIViewController {
     // Onload function
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         uiUpdates()
-        
         highScoreLbl.text = String(score)
         currTime = MOVETIME
         startTimer()
         newPlay()
         score = 0
+    }
+    
+    //Func: Updates Data
+    func updateNSUserDefaults(){
+        UserDefaults.standard.set(ViewController.highScore, forKey:"SCORE")
+    }
+    
+    //Func: Checks to update HighScore
+    func checkHighScore(CurrentScore: Int){
+        if (CurrentScore > ViewController.highScore){
+            ViewController.highScore = CurrentScore
+            updateNSUserDefaults()
+        }
     }
     
     //Func: Loads UI Updates
@@ -63,13 +74,8 @@ class GameViewController: UIViewController {
         highScoreLbl.text = "Game over! Score: " + String(score)
         highScoreLbl.textColor = UIColor.red
         isAlive = false
+        checkHighScore(CurrentScore: score)
         
-        if score > ViewController.highScore {
-            ViewController.highScore = score
-        }
-        
-        UserDefaults.standard.setValue("GameViewController.highScore", forKey: "highScore")
-        UserDefaults.standard.synchronize()
     }
     
     // Func: generates new text and color

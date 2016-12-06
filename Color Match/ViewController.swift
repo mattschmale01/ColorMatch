@@ -20,17 +20,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (UserDefaults.standard.value(forKey: "highScore") as? Int) != nil{
-            highScoreLbl.text = "Your high score is " + String(ViewController.highScore)
-        } else {
-                highScoreLbl.text = "Hit the play button to begin!"
-        }
+      
+            if let scoreData = UserDefaults.standard.integer(forKey: "SCORE") as Int?{
+                highScoreLbl.text = "High Score: \(scoreData)"
+            } else {
+                highScoreLbl.text = "Play to Begin!"
+            }
         
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
 
 
