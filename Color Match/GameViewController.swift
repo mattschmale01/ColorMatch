@@ -44,7 +44,7 @@ class GameViewController: UIViewController {
     
     //Func: Updates Data
     func updateNSUserDefaults(){
-        UserDefaults.standard.set(ViewController.highScore, forKey:"SCORE")
+        UserDefaults.standard.set(score, forKey:"SCORE")
     }
     
     //Func: Checks to update HighScore

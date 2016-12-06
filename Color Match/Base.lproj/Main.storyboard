@@ -93,30 +93,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="LU2-NU-jPi">
                                 <rect key="frame" x="16" y="503" width="350" height="150"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp0-K4-Gqr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp0-K4-Gqr">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <color key="backgroundColor" red="1" green="0.23475062469999999" blue="0.13928429440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="BLW-Fb-g9r"/>
                                             <constraint firstAttribute="height" constant="150" id="JEE-09-NZK"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                        <state key="normal" title="Naw">
+                                        <state key="normal" image="x">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="noBtn:" destination="3rT-PM-anL" eventType="touchDown" id="Sla-ZH-ivl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AU-90-hxb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AU-90-hxb">
                                         <rect key="frame" x="200" y="0.0" width="150" height="150"/>
                                         <color key="backgroundColor" red="0.38380322569999997" green="1" blue="0.21650703239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="dk7-cV-esB"/>
                                             <constraint firstAttribute="height" constant="150" id="goG-fX-fLY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                        <state key="normal" title="Yee">
+                                        <state key="normal" image="check">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -190,7 +188,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="check" width="64" height="64"/>
         <image name="logo" width="536" height="84"/>
         <image name="mainbg" width="2560" height="1600"/>
+        <image name="x" width="128" height="128"/>
     </resources>
 </document>
