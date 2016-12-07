@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import AudioToolbox
 
 class GameViewController: UIViewController {
 
@@ -100,13 +101,18 @@ class GameViewController: UIViewController {
     
     // Func: ends game
     func gameOver() {
+        // Play sound and vibrate phone (PISS THE PLAYER OFF!)
         playSound(fileName: "fail")
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
+        // Update highscore info
         highScoreLbl.text = "Game over! Score: " + String(score)
         highScoreLbl.textColor = UIColor.red
+        checkHighScore(CurrentScore: score)
+        
+        // Housekeeping
         backBtn.setTitleColor(UIColor.red, for: .normal)
         isAlive = false
-        checkHighScore(CurrentScore: score)
-   
     }
     
     // Func: generates new text and color
