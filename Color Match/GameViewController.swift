@@ -43,19 +43,6 @@ class GameViewController: UIViewController {
     // Onload function
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let path = Bundle.main.path(forResource: "fail", ofType: "wav")
-//        let soundURL = NSURL(fileURLWithPath: path!)
-//        
-//        do {
-//            try loseBtnSound = AVAudioPlayer(contentsOf: soundURL as URL)
-//            loseBtnSound.prepareToPlay()
-//        } catch let err as NSError {
-//            print( err.debugDescription)
-//        }
-    
-
-        
         uiUpdates()
         highScoreLbl.text = String(score)
         currTime = MOVETIME
@@ -162,6 +149,7 @@ class GameViewController: UIViewController {
     @IBAction func noBtn(_ sender: Any) {
         if isAlive {
             if colorNameMap.index(of: curText) != colorHexMap.index(of: curColor) {
+                playSound(fileName: "tap")
                 addPoints()
                 newPlay()
             } else {
@@ -175,6 +163,7 @@ class GameViewController: UIViewController {
     @IBAction func yesBtn(_ sender: Any) {
         if isAlive {
             if colorNameMap.index(of: curText) == colorHexMap.index(of: curColor) {
+                playSound(fileName: "tap")
                 addPoints()
                 newPlay()
             } else {
@@ -191,8 +180,8 @@ class GameViewController: UIViewController {
         timeLeftLbl.text = String(Double(round(10*currTime!)/10))
         if currTime! <= 0 {
             timeLeftLbl.text = "Time's up!"
+            timer.invalidate()
             gameOver()
-            
         }
     }
     
