@@ -61,12 +61,12 @@ class GameViewController: UIViewController {
     
     //Func: Check death
     func checkDeath(){
-        if deathCount%5 == 0{
-            deathCount+=1
-            //play air horn
+        if deathCount % 11 == 0 && deathCount != 0{
+            deathCount += 1
+            playSound(fileName: "horn")
         } else {
-            deathCount+=1
-            //No air horn
+            deathCount += 1
+            playSound(fileName: "fail")
         }
     }
     //Func: Plays a sound of our choice
@@ -121,7 +121,6 @@ class GameViewController: UIViewController {
         checkDeath()
         
         // Play sound and vibrate phone (PISS THE PLAYER OFF!)
-        playSound(fileName: "fail")
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
         // Update highscore info
