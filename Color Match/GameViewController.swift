@@ -61,7 +61,7 @@ class GameViewController: UIViewController {
     
     //Func: Check death
     func checkDeath(){
-        if deathCount%5 == 1{
+        if deathCount%5 == 0{
             deathCount+=1
             //play air horn
         } else {
