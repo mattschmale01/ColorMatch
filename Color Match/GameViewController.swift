@@ -45,11 +45,18 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         uiUpdates()
+        loadGame()
+    }
+    
+    // Func: actions for onload
+    func loadGame() {
+        score = 0
         highScoreLbl.text = String(score)
+        highScoreLbl.textColor = UIColor.black
         currTime = MOVETIME
         startTimer()
         newPlay()
-        score = 0
+        isAlive = true
     }
    
     //Func: Plays a sound of our choice
@@ -163,6 +170,8 @@ class GameViewController: UIViewController {
                 timeLeftLbl.text = ""
                 gameOver()
             }
+        } else {
+            loadGame()
         }
     }
     
@@ -177,6 +186,8 @@ class GameViewController: UIViewController {
                 gameOver()
                 timeLeftLbl.text = ""
             }
+        } else {
+            loadGame()
         }
     }
     
