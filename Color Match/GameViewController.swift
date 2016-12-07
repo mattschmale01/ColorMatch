@@ -34,8 +34,8 @@ class GameViewController: UIViewController {
     var currTime: Double?
     var curText: String = ""
     var curColor: String = ""
+    var deathCount = 0
     
-    var loseBtnSound: AVAudioPlayer!
     
     // Color maps
     let colorNameMap = ["Blue", "Red", "Green",]
@@ -49,7 +49,7 @@ class GameViewController: UIViewController {
     }
     
     // Func: actions for onload
-    func loadGame() {
+    func loadGame(){
         score = 0
         highScoreLbl.text = String(score)
         highScoreLbl.textColor = UIColor.black
@@ -58,7 +58,17 @@ class GameViewController: UIViewController {
         newPlay()
         isAlive = true
     }
-   
+    
+    //Func: Check death
+    func checkDeath(){
+        if deathCount%5 == 1{
+            deathCount+=1
+            //play air horn
+        } else {
+            deathCount+=1
+            //No air horn
+        }
+    }
     //Func: Plays a sound of our choice
     func playSound(fileName: String) {
         guard let sound = NSDataAsset(name: fileName) else {
@@ -108,6 +118,8 @@ class GameViewController: UIViewController {
     
     // Func: ends game
     func gameOver() {
+        checkDeath()
+        
         // Play sound and vibrate phone (PISS THE PLAYER OFF!)
         playSound(fileName: "fail")
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
