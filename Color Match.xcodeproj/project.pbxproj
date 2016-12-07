@@ -223,7 +223,7 @@
 				TargetAttributes = {
 					C9B3B6F81DEE977F00941CD5 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = LLK9WYY77X;
+						DevelopmentTeam = 52T7QEGS9R;
 						ProvisioningStyle = Automatic;
 					};
 					C9B3B70F1DEE978100941CD5 = {
@@ -446,11 +446,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = LLK9WYY77X;
+				DEVELOPMENT_TEAM = 52T7QEGS9R;
 				INFOPLIST_FILE = "Color Match/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.Schmale1.Color-Match";
+				PRODUCT_BUNDLE_IDENTIFIER = "co..Color-Match";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -461,11 +461,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = LLK9WYY77X;
+				DEVELOPMENT_TEAM = 52T7QEGS9R;
 				INFOPLIST_FILE = "Color Match/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.Schmale1.Color-Match";
+				PRODUCT_BUNDLE_IDENTIFIER = "co..Color-Match";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

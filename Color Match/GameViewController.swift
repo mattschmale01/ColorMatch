@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController {
 
-    // Connect labels
+    //Audio Variables
+    var player: AVAudioPlayer?
+    
+    // Connected labels
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var highScoreLbl: UILabel!
     @IBOutlet weak var timeLeftLbl: UILabel!
+    @IBOutlet weak var backGndImg: UIImageView!
     
+    //Connected Buttons
     @IBOutlet weak var yesBtn: UIButton!
     @IBOutlet weak var noBtn: UIButton!
     @IBOutlet weak var backBtn: UIButton!
@@ -28,6 +34,8 @@ class GameViewController: UIViewController {
     var curText: String = ""
     var curColor: String = ""
     
+    var loseBtnSound: AVAudioPlayer!
+    
     // Color maps
     let colorNameMap = ["Blue", "Red", "Green",]
     let colorHexMap = ["#0080ff", "#ff0000", "#00ff00"]
@@ -35,12 +43,44 @@ class GameViewController: UIViewController {
     // Onload function
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let path = Bundle.main.path(forResource: "fail", ofType: "wav")
+//        let soundURL = NSURL(fileURLWithPath: path!)
+//        
+//        do {
+//            try loseBtnSound = AVAudioPlayer(contentsOf: soundURL as URL)
+//            loseBtnSound.prepareToPlay()
+//        } catch let err as NSError {
+//            print( err.debugDescription)
+//        }
+    
+
+        
         uiUpdates()
         highScoreLbl.text = String(score)
         currTime = MOVETIME
         startTimer()
         newPlay()
         score = 0
+    }
+   
+    //Func: Plays a sound of our choice
+    func playSound(fileName: String) {
+        guard let sound = NSDataAsset(name: fileName) else {
+            print("asset not found")
+            return
+        }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            player = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeWAVE)
+            
+            player!.play()
+        } catch let error as NSError {
+            print("error: \(error.localizedDescription)")
+        }
     }
     
     //Func: Updates Data
@@ -61,6 +101,7 @@ class GameViewController: UIViewController {
         yesBtn.layer.cornerRadius = 5.0
         noBtn.layer.cornerRadius = 5.0
         backBtn.setTitleColor(UIColor.black, for: .normal)
+        
         }
     
     // Func: adds points to high score label
@@ -72,12 +113,13 @@ class GameViewController: UIViewController {
     
     // Func: ends game
     func gameOver() {
+        playSound(fileName: "fail")
         highScoreLbl.text = "Game over! Score: " + String(score)
         highScoreLbl.textColor = UIColor.red
         backBtn.setTitleColor(UIColor.red, for: .normal)
         isAlive = false
         checkHighScore(CurrentScore: score)
-        
+   
     }
     
     // Func: generates new text and color

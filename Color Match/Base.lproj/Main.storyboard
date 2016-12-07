@@ -90,7 +90,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helix" translatesAutoresizingMaskIntoConstraints="NO" id="XNd-vU-UL1">
+                            <imageView userInteractionEnabled="NO" alpha="0.13500000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helix" translatesAutoresizingMaskIntoConstraints="NO" id="XNd-vU-UL1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="LU2-NU-jPi">
@@ -186,6 +186,7 @@
                     </view>
                     <connections>
                         <outlet property="backBtn" destination="CVq-MN-cgm" id="2KX-JK-Dkb"/>
+                        <outlet property="backGndImg" destination="XNd-vU-UL1" id="V2S-V1-Y81"/>
                         <outlet property="colorLabel" destination="8uX-Zg-GGH" id="hnS-Zj-L84"/>
                         <outlet property="highScoreLbl" destination="j4c-ev-hxC" id="W1X-wQ-vZu"/>
                         <outlet property="noBtn" destination="Kp0-K4-Gqr" id="rdw-Ec-9tf"/>
