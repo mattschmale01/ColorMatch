@@ -61,7 +61,10 @@ class GameViewController: UIViewController {
     
     //Func: Check death
     func checkDeath(){
-        if deathCount % 11 == 0 && deathCount != 0{
+        if deathCount % 11 == 0 && deathCount != 0 {
+            deathCount += 1
+            playSound(fileName: "ben")
+        } else if deathCount % 7 == 0 && deathCount != 0 {
             deathCount += 1
             playSound(fileName: "horn")
         } else {
