@@ -75,7 +75,7 @@ class GameViewController: UIViewController {
     //Func: Plays a sound of our choice
     func playSound(fileName: String) {
         guard let sound = NSDataAsset(name: fileName) else {
-            print("asset not found")
+            print("Asset not found")
             return
         }
         
@@ -91,26 +91,37 @@ class GameViewController: UIViewController {
         }
     }
     
+    
+    
     //Func: Updates Data
-    func updateNSUserDefaults(){
+    func updateNSUserDefaults(score: Int){
         UserDefaults.standard.set(score, forKey:"SCORE")
     }
     
     //Func: Checks to update HighScore
     func checkHighScore(CurrentScore: Int){
-        if (CurrentScore > ViewController.highScore){
+        if (CurrentScore > ViewController.highScore!){
             ViewController.highScore = CurrentScore
-            updateNSUserDefaults()
+            updateNSUserDefaults(score: CurrentScore)
         }
     }
+    //Func: Disables all the buttons
+    func disableAllBtns(){
+        yesBtn.isEnabled = false
+        noBtn.isEnabled = false
+    }
     
+    //Func:Enables all the buttons
+    func enableALlBtns(){
+        yesBtn.isEnabled = true
+        noBtn.isEnabled = true
+    }
     //Func: Loads UI Updates
     func uiUpdates(){
         yesBtn.layer.cornerRadius = 5.0
         noBtn.layer.cornerRadius = 5.0
         backBtn.setTitleColor(UIColor.black, for: .normal)
-        
-        }
+    }
     
     // Func: adds points to high score label
     func addPoints() {
@@ -119,11 +130,11 @@ class GameViewController: UIViewController {
         currTime = MOVETIME
     }
     
-    // Func: ends game
+    // Func: Ends game
     func gameOver() {
         checkDeath()
         
-        // Play sound and vibrate phone (PISS THE PLAYER OFF!)
+        // Play sound and vibrate phone
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
         // Update highscore info

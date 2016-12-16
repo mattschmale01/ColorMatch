@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var highScoreLbl: UILabel!
-    static var highScore = 0
+    static var highScore: Int?
 
     @IBAction func onBtnPress(_ sender: Any) {
    
@@ -19,22 +19,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
             if let scoreData = UserDefaults.standard.integer(forKey: "SCORE") as Int?{
-                highScoreLbl.text = "High Score: \(scoreData)"
+                    ViewController.highScore = scoreData
+                    highScoreLbl.text = "Your High Score: \(Int(ViewController.highScore!))"
             } else {
-                highScoreLbl.text = "Play to Begin!"
+                    ViewController.highScore = 0
+                    highScoreLbl.text = "Press Play!"
             }
-        
-        highScoreLbl.layer.cornerRadius = 5.0
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        
-    }
-
-
 }
 
