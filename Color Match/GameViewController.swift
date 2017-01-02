@@ -38,8 +38,8 @@ class GameViewController: UIViewController {
     
     
     // Color maps
-    let colorNameMap = ["Blue", "Red", "Green",]
-    let colorHexMap = ["#0080ff", "#ff0000", "#00ff00"]
+    let colorNameMap = ["Blue", "Red", "Green", "Orange", "Yellow", "Pink", "Purple"]
+    let colorHexMap = ["#0080ff", "#ff0000", "#00ff00", "#ffa500", "#ffff00", "#ff1493", "#9400d3"]
 
     // Onload function
     override func viewDidLoad() {
@@ -149,10 +149,10 @@ class GameViewController: UIViewController {
     
     // Func: generates new text and color
     func newPlay() {
-        curText = colorNameMap[randInt(range: 3)]
+        curText = colorNameMap[randInt(range: colorNameMap.count)]
         colorLabel.text = curText
         
-        curColor = colorHexMap[randInt(range: 3)]
+        curColor = colorHexMap[randInt(range: colorHexMap.count)]
         colorLabel.textColor = hexStringToUIColor(hex: curColor)
     }
     
