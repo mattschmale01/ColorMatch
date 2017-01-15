@@ -10,9 +10,14 @@ import UIKit
 
 class SettingsPopUpViewController: UIViewController {
 
+    // Close popUp
+    @IBAction func closePopUp(_ sender: Any) {
+        self.view.removeFromSuperview()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         // Do any additional setup after loading the view.
     }
 
