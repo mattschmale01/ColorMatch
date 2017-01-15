@@ -12,6 +12,9 @@
 		C94656821E2C19B100FC6C00 /* Karla-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C946567E1E2C19B100FC6C00 /* Karla-Italic.ttf */; };
 		C94656831E2C19B100FC6C00 /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C946567F1E2C19B100FC6C00 /* Karla-Regular.ttf */; };
 		C94656841E2C19B100FC6C00 /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94656801E2C19B100FC6C00 /* Karla-Bold.ttf */; };
+		C94656891E2C1BC600FC6C00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94656881E2C1BC600FC6C00 /* Constants.swift */; };
+		C946568B1E2C1BF200FC6C00 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946568A1E2C1BF200FC6C00 /* CustomButton.swift */; };
+		C946568D1E2C1F2100FC6C00 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946568C1E2C1F2100FC6C00 /* CustomView.swift */; };
 		C947AF611DEF811C002E933C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947AF601DEF811C002E933C /* GameViewController.swift */; };
 		C9B3B6FD1DEE978100941CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */; };
 		C9B3B6FF1DEE978100941CD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6FE1DEE978100941CD5 /* ViewController.swift */; };
@@ -47,6 +50,9 @@
 		C946567E1E2C19B100FC6C00 /* Karla-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Italic.ttf"; sourceTree = "<group>"; };
 		C946567F1E2C19B100FC6C00 /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
 		C94656801E2C19B100FC6C00 /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
+		C94656881E2C1BC600FC6C00 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C946568A1E2C1BF200FC6C00 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		C946568C1E2C1F2100FC6C00 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		C947AF601DEF811C002E933C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C9B3B6F91DEE978100941CD5 /* Color Match.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Match.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C94656871E2C1BBC00FC6C00 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C94656881E2C1BC600FC6C00 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		C947AF5C1DEF7FAB002E933C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +114,8 @@
 		C947AF5E1DEF7FBC002E933C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C946568A1E2C1BF200FC6C00 /* CustomButton.swift */,
+				C946568C1E2C1F2100FC6C00 /* CustomView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -138,13 +154,14 @@
 		C9B3B6FB1DEE978100941CD5 /* Color Match */ = {
 			isa = PBXGroup;
 			children = (
-				C9E80DD61E2C13F90025B1D6 /* Fonts */,
+				C9B3B7061DEE978100941CD5 /* Assets.xcassets */,
+				C94656871E2C1BBC00FC6C00 /* Util */,
+				C9E80DD61E2C13F90025B1D6 /* Resources */,
 				C947AF5F1DEF7FC4002E933C /* Controller */,
 				C947AF5E1DEF7FBC002E933C /* View */,
 				C947AF5C1DEF7FAB002E933C /* Model */,
 				C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */,
 				C9B3B7001DEE978100941CD5 /* Main.storyboard */,
-				C9B3B7061DEE978100941CD5 /* Assets.xcassets */,
 				C9B3B7081DEE978100941CD5 /* LaunchScreen.storyboard */,
 				C9B3B70B1DEE978100941CD5 /* Info.plist */,
 				C9B3B7031DEE978100941CD5 /* Color_Match.xcdatamodeld */,
@@ -170,7 +187,7 @@
 			path = "Color MatchUITests";
 			sourceTree = "<group>";
 		};
-		C9E80DD61E2C13F90025B1D6 /* Fonts */ = {
+		C9E80DD61E2C13F90025B1D6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				C946567D1E2C19B100FC6C00 /* Karla-BoldItalic.ttf */,
@@ -178,7 +195,7 @@
 				C946567F1E2C19B100FC6C00 /* Karla-Regular.ttf */,
 				C94656801E2C19B100FC6C00 /* Karla-Bold.ttf */,
 			);
-			name = Fonts;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,7 +340,10 @@
 				C947AF611DEF811C002E933C /* GameViewController.swift in Sources */,
 				C9B3B6FF1DEE978100941CD5 /* ViewController.swift in Sources */,
 				C9B3B7051DEE978100941CD5 /* Color_Match.xcdatamodeld in Sources */,
+				C946568D1E2C1F2100FC6C00 /* CustomView.swift in Sources */,
 				D02588DD1E2C0C9500968A76 /* SettingsPopUpViewController.swift in Sources */,
+				C946568B1E2C1BF200FC6C00 /* CustomButton.swift in Sources */,
+				C94656891E2C1BC600FC6C00 /* Constants.swift in Sources */,
 				C926CDD01E2C0F9800F820BF /* helpViewPopUpController.swift in Sources */,
 				C9B3B6FD1DEE978100941CD5 /* AppDelegate.swift in Sources */,
 			);

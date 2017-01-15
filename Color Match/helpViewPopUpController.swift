@@ -10,19 +10,21 @@ import UIKit
 
 class helpViewPopUpController: UIViewController {
     
-    //Func: Closes Help Screen
     
+    
+    
+    //Func: Closes Help Screen
     @IBAction func onCloseBtnPress(_ sender: Any) {
         removeAnimate()
-  
     }
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        self.view.backgroundColor = UIColor.white.withAlphaComponent(0.85)
         showAnimate()
     }
     
+    //Func: Runs animation
     func showAnimate()
     {
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -33,6 +35,7 @@ class helpViewPopUpController: UIViewController {
         });
     }
     
+    //Func: Runs closing animation
     func removeAnimate()
     {
         UIView.animate(withDuration: 0.25, animations: {
