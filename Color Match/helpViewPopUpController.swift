@@ -13,8 +13,8 @@ class helpViewPopUpController: UIViewController {
     //Func: Closes Help Screen
     
     @IBAction func onCloseBtnPress(_ sender: Any) {
-        self.view.removeFromSuperview()
         removeAnimate()
+  
     }
    
     override func viewDidLoad() {
