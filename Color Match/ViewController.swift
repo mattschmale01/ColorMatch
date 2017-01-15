@@ -16,6 +16,16 @@ class ViewController: UIViewController {
     @IBAction func onBtnPress(_ sender: Any) {
    
     }
+    
+    
+    // Show settings pop up
+    @IBAction func showSettingsPopUp(_ sender: Any) {
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "settingsPopUpID") as! SettingsPopUpViewController
+        self.addChildViewController(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        popUpVC.didMove(toParentViewController: self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
