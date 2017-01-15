@@ -26,6 +26,7 @@
 		C9B3B7151DEE978100941CD5 /* Color_MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B7141DEE978100941CD5 /* Color_MatchTests.swift */; };
 		C9B3B7201DEE978100941CD5 /* Color_MatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B71F1DEE978100941CD5 /* Color_MatchUITests.swift */; };
 		D02588DD1E2C0C9500968A76 /* SettingsPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02588DC1E2C0C9500968A76 /* SettingsPopUpViewController.swift */; };
+		D06704DE1E2C3B7800E7AD3D /* Attributions.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06704DD1E2C3B7800E7AD3D /* Attributions.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		C9B3B71F1DEE978100941CD5 /* Color_MatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_MatchUITests.swift; sourceTree = "<group>"; };
 		C9B3B7211DEE978100941CD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D02588DC1E2C0C9500968A76 /* SettingsPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPopUpViewController.swift; sourceTree = "<group>"; };
+		D06704DD1E2C3B7800E7AD3D /* Attributions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Attributions.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 				C946567E1E2C19B100FC6C00 /* Karla-Italic.ttf */,
 				C946567F1E2C19B100FC6C00 /* Karla-Regular.ttf */,
 				C94656801E2C19B100FC6C00 /* Karla-Bold.ttf */,
+				D06704DD1E2C3B7800E7AD3D /* Attributions.txt */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				C94656841E2C19B100FC6C00 /* Karla-Bold.ttf in Resources */,
 				C9B3B7021DEE978100941CD5 /* Main.storyboard in Resources */,
 				C94656811E2C19B100FC6C00 /* Karla-BoldItalic.ttf in Resources */,
+				D06704DE1E2C3B7800E7AD3D /* Attributions.txt in Resources */,
 				C94656831E2C19B100FC6C00 /* Karla-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
