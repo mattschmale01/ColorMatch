@@ -17,7 +17,6 @@ class ViewController: UIViewController {
    
     }
     
-    
     // Show settings pop up
     @IBAction func showSettingsPopUp(_ sender: Any) {
         let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "settingsPopUpID") as! SettingsPopUpViewController
