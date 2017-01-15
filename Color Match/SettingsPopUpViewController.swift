@@ -15,9 +15,14 @@ class SettingsPopUpViewController: UIViewController {
         self.removeAnimate()
     }
     
+    // Action Func: Close popup when user click out of bounds
+    @IBAction func touchedOutOfBounds(_ sender: Any) {
+        self.removeAnimate()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         self.showAnimate()
         // Do any additional setup after loading the view.
     }
