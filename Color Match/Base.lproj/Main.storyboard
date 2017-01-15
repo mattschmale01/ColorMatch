@@ -119,7 +119,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXn-lR-GJP">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HXn-lR-GJP" customClass="CustomView" customModule="Color_Match" customModuleProvider="target">
                                 <rect key="frame" x="18" y="221" width="341" height="225"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="y6O-Fa-v55">
@@ -207,14 +207,24 @@
                                     <constraint firstItem="auG-SG-Dyl" firstAttribute="top" secondItem="HXn-lR-GJP" secondAttribute="top" constant="34" id="vab-k9-3rz"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWw-At-gDb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <action selector="touchedOutOfBounds:" destination="HeQ-6O-dKQ" eventType="touchUpInside" id="X06-mJ-XOh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="e1C-TH-Ebq" firstAttribute="top" secondItem="HXn-lR-GJP" secondAttribute="bottom" constant="221" id="2Mg-lS-aA1"/>
+                            <constraint firstItem="MWw-At-gDb" firstAttribute="top" secondItem="DyG-zL-CBa" secondAttribute="top" id="Chq-0X-owE"/>
                             <constraint firstItem="HXn-lR-GJP" firstAttribute="top" secondItem="ko9-C9-urI" secondAttribute="bottom" constant="201" id="NaR-61-QYi"/>
                             <constraint firstItem="HXn-lR-GJP" firstAttribute="trailing" secondItem="DyG-zL-CBa" secondAttribute="trailingMargin" id="Ux1-vl-a5Z"/>
                             <constraint firstItem="HXn-lR-GJP" firstAttribute="centerX" secondItem="DyG-zL-CBa" secondAttribute="centerX" id="Vwr-YR-bGB"/>
+                            <constraint firstAttribute="trailing" secondItem="MWw-At-gDb" secondAttribute="trailing" id="kxL-Ld-dKP"/>
+                            <constraint firstItem="e1C-TH-Ebq" firstAttribute="top" secondItem="MWw-At-gDb" secondAttribute="bottom" id="nSL-LX-JAL"/>
                             <constraint firstItem="HXn-lR-GJP" firstAttribute="leading" secondItem="DyG-zL-CBa" secondAttribute="leadingMargin" constant="2" id="rV2-9Q-ANr"/>
+                            <constraint firstItem="MWw-At-gDb" firstAttribute="leading" secondItem="DyG-zL-CBa" secondAttribute="leading" id="yfo-40-MOy"/>
                         </constraints>
                     </view>
                 </viewController>
