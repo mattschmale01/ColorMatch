@@ -15,6 +15,7 @@
 		C94656891E2C1BC600FC6C00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94656881E2C1BC600FC6C00 /* Constants.swift */; };
 		C946568B1E2C1BF200FC6C00 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946568A1E2C1BF200FC6C00 /* CustomButton.swift */; };
 		C946568D1E2C1F2100FC6C00 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946568C1E2C1F2100FC6C00 /* CustomView.swift */; };
+		C946568F1E2C250500FC6C00 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946568E1E2C250500FC6C00 /* CustomLabel.swift */; };
 		C947AF611DEF811C002E933C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947AF601DEF811C002E933C /* GameViewController.swift */; };
 		C9B3B6FD1DEE978100941CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */; };
 		C9B3B6FF1DEE978100941CD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6FE1DEE978100941CD5 /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		C94656881E2C1BC600FC6C00 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C946568A1E2C1BF200FC6C00 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C946568C1E2C1F2100FC6C00 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		C946568E1E2C250500FC6C00 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		C947AF601DEF811C002E933C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C9B3B6F91DEE978100941CD5 /* Color Match.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Match.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				C946568A1E2C1BF200FC6C00 /* CustomButton.swift */,
 				C946568C1E2C1F2100FC6C00 /* CustomView.swift */,
+				C946568E1E2C250500FC6C00 /* CustomLabel.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C947AF611DEF811C002E933C /* GameViewController.swift in Sources */,
+				C946568F1E2C250500FC6C00 /* CustomLabel.swift in Sources */,
 				C9B3B6FF1DEE978100941CD5 /* ViewController.swift in Sources */,
 				C9B3B7051DEE978100941CD5 /* Color_Match.xcdatamodeld in Sources */,
 				C946568D1E2C1F2100FC6C00 /* CustomView.swift in Sources */,
@@ -505,6 +509,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.Cunha1.Color-Match";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -520,6 +525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.Cunha1.Color-Match";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

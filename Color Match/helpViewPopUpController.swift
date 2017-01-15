@@ -11,17 +11,22 @@ import UIKit
 class helpViewPopUpController: UIViewController {
     
     
+    @IBOutlet weak var imgView: UIImageView!
     
     
     //Func: Closes Help Screen
     @IBAction func onCloseBtnPress(_ sender: Any) {
         removeAnimate()
     }
+    
    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white.withAlphaComponent(0.85)
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         showAnimate()
+        imgView.layer.cornerRadius = 15.0
+        imgView.clipsToBounds = true
     }
     
     //Func: Runs animation

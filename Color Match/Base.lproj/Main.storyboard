@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Karla-Bold.ttf">
             <string>Karla-Bold</string>
+        </array>
+        <array key="Karla-Regular.ttf">
+            <string>Karla-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -237,7 +240,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="LU2-NU-jPi">
                                 <rect key="frame" x="16" y="503" width="350" height="150"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp0-K4-Gqr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kp0-K4-Gqr" customClass="CustomButton" customModule="Color_Match" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <color key="backgroundColor" red="1" green="0.23475062469999999" blue="0.13928429440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -251,7 +254,7 @@
                                             <action selector="noBtn:" destination="3rT-PM-anL" eventType="touchDown" id="Sla-ZH-ivl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AU-90-hxb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AU-90-hxb" customClass="CustomButton" customModule="Color_Match" customModuleProvider="target">
                                         <rect key="frame" x="200" y="0.0" width="150" height="150"/>
                                         <color key="backgroundColor" red="0.38380322569999997" green="1" blue="0.21650703239999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -351,57 +354,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Uv-oo-i3r">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <action selector="onCloseBtnPress:" destination="cy8-gy-U8V" eventType="touchUpInside" id="Uvs-eh-nzp"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="helpImg" translatesAutoresizingMaskIntoConstraints="NO" id="wcF-C9-zBt">
                                 <rect key="frame" x="16" y="28" width="343" height="399"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="399" id="dmF-1I-fDF"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b0n-dM-TGo" customClass="CustomView" customModule="Color_Match" customModuleProvider="target">
-                                <rect key="frame" x="16" y="439" width="350" height="220"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogM-zH-j5v" customClass="CustomView" customModule="Color_Match" customModuleProvider="target">
+                                <rect key="frame" x="23" y="425" width="329" height="234"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3X-Qj-iKV">
-                                        <rect key="frame" x="4" y="10" width="343" height="201"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3X-Qj-iKV" customClass="CustomLabel" customModule="Color_Match" customModuleProvider="target">
+                                        <rect key="frame" x="7" y="16" width="315" height="201"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="323" id="sac-cP-02R"/>
+                                        </constraints>
                                         <string key="text">How To Play :
 
 When a color pops up on the screen, you have less than one second to decide if the shown color matches it’s highlighted color. If you run out of time or choose incorrectly, it’s game over! </string>
-                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.54060375689999995" blue="0.37561589480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="vzh-Gm-oQb"/>
+                                    <constraint firstItem="q3X-Qj-iKV" firstAttribute="leading" secondItem="ogM-zH-j5v" secondAttribute="leading" constant="7" id="HLx-bg-HSd"/>
+                                    <constraint firstAttribute="trailing" secondItem="q3X-Qj-iKV" secondAttribute="trailing" constant="7" id="Kf3-Gu-z7s"/>
+                                    <constraint firstItem="q3X-Qj-iKV" firstAttribute="top" secondItem="ogM-zH-j5v" secondAttribute="top" constant="16" id="PUI-Is-Nd7"/>
+                                    <constraint firstAttribute="bottom" secondItem="q3X-Qj-iKV" secondAttribute="bottom" constant="17" id="p74-Rs-bs5"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hb-z5-ore" customClass="CustomButton" customModule="Color_Match" customModuleProvider="target">
-                                <rect key="frame" x="291" y="20" width="75" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="ceY-6G-VXZ"/>
-                                    <constraint firstAttribute="height" constant="75" id="e6n-zK-TVz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="20"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onCloseBtnPress:" destination="cy8-gy-U8V" eventType="touchUpInside" id="fAB-84-bcd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kav-89-5NU" firstAttribute="top" secondItem="b0n-dM-TGo" secondAttribute="bottom" constant="8" id="F19-K4-vzZ"/>
-                            <constraint firstItem="4hb-z5-ore" firstAttribute="top" secondItem="k3t-Xs-PhC" secondAttribute="bottom" id="In2-Cy-4V7"/>
+                            <constraint firstItem="kav-89-5NU" firstAttribute="top" secondItem="ogM-zH-j5v" secondAttribute="bottom" constant="8" id="4dF-UL-1dQ"/>
+                            <constraint firstItem="kav-89-5NU" firstAttribute="top" secondItem="6Uv-oo-i3r" secondAttribute="bottom" id="5oa-Tn-onS"/>
+                            <constraint firstAttribute="trailing" secondItem="6Uv-oo-i3r" secondAttribute="trailing" id="ARw-Qu-lCi"/>
                             <constraint firstItem="wcF-C9-zBt" firstAttribute="top" secondItem="k3t-Xs-PhC" secondAttribute="bottom" id="UT6-we-FQG"/>
                             <constraint firstItem="wcF-C9-zBt" firstAttribute="trailing" secondItem="HMM-lB-73D" secondAttribute="trailingMargin" id="bor-Q8-QZ1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4hb-z5-ore" secondAttribute="trailing" id="cN7-66-po9"/>
+                            <constraint firstItem="6Uv-oo-i3r" firstAttribute="top" secondItem="HMM-lB-73D" secondAttribute="top" id="fkc-jt-a60"/>
                             <constraint firstItem="wcF-C9-zBt" firstAttribute="leading" secondItem="HMM-lB-73D" secondAttribute="leadingMargin" id="h6N-jy-iAF"/>
-                            <constraint firstItem="b0n-dM-TGo" firstAttribute="centerX" secondItem="HMM-lB-73D" secondAttribute="centerX" id="ozn-5G-fzl"/>
+                            <constraint firstItem="ogM-zH-j5v" firstAttribute="centerX" secondItem="HMM-lB-73D" secondAttribute="centerX" id="hrK-dt-wFD"/>
+                            <constraint firstItem="6Uv-oo-i3r" firstAttribute="leading" secondItem="HMM-lB-73D" secondAttribute="leading" id="oyF-DY-1Xh"/>
+                            <constraint firstItem="ogM-zH-j5v" firstAttribute="leading" secondItem="HMM-lB-73D" secondAttribute="leadingMargin" constant="7" id="yvO-bX-jfg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ogM-zH-j5v" secondAttribute="trailing" constant="7" id="zJF-kZ-Lnj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgView" destination="wcF-C9-zBt" id="oXr-gl-Ab8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Q1-Jg-99r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
