@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C926CDD01E2C0F9800F820BF /* helpViewPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926CDCF1E2C0F9800F820BF /* helpViewPopUpController.swift */; };
+		C94656811E2C19B100FC6C00 /* Karla-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C946567D1E2C19B100FC6C00 /* Karla-BoldItalic.ttf */; };
+		C94656821E2C19B100FC6C00 /* Karla-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C946567E1E2C19B100FC6C00 /* Karla-Italic.ttf */; };
+		C94656831E2C19B100FC6C00 /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C946567F1E2C19B100FC6C00 /* Karla-Regular.ttf */; };
+		C94656841E2C19B100FC6C00 /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94656801E2C19B100FC6C00 /* Karla-Bold.ttf */; };
 		C947AF611DEF811C002E933C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947AF601DEF811C002E933C /* GameViewController.swift */; };
 		C9B3B6FD1DEE978100941CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */; };
 		C9B3B6FF1DEE978100941CD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6FE1DEE978100941CD5 /* ViewController.swift */; };
@@ -39,6 +43,10 @@
 
 /* Begin PBXFileReference section */
 		C926CDCF1E2C0F9800F820BF /* helpViewPopUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helpViewPopUpController.swift; sourceTree = "<group>"; };
+		C946567D1E2C19B100FC6C00 /* Karla-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C946567E1E2C19B100FC6C00 /* Karla-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Italic.ttf"; sourceTree = "<group>"; };
+		C946567F1E2C19B100FC6C00 /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
+		C94656801E2C19B100FC6C00 /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
 		C947AF601DEF811C002E933C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C9B3B6F91DEE978100941CD5 /* Color Match.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Match.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +173,10 @@
 		C9E80DD61E2C13F90025B1D6 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				C946567D1E2C19B100FC6C00 /* Karla-BoldItalic.ttf */,
+				C946567E1E2C19B100FC6C00 /* Karla-Italic.ttf */,
+				C946567F1E2C19B100FC6C00 /* Karla-Regular.ttf */,
+				C94656801E2C19B100FC6C00 /* Karla-Bold.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -279,7 +291,11 @@
 			files = (
 				C9B3B70A1DEE978100941CD5 /* LaunchScreen.storyboard in Resources */,
 				C9B3B7071DEE978100941CD5 /* Assets.xcassets in Resources */,
+				C94656821E2C19B100FC6C00 /* Karla-Italic.ttf in Resources */,
+				C94656841E2C19B100FC6C00 /* Karla-Bold.ttf in Resources */,
 				C9B3B7021DEE978100941CD5 /* Main.storyboard in Resources */,
+				C94656811E2C19B100FC6C00 /* Karla-BoldItalic.ttf in Resources */,
+				C94656831E2C19B100FC6C00 /* Karla-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

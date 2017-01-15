@@ -42,5 +42,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Karla-BoldItalic</string>
+		<string>Karla-Italic</string>
+		<string>Karla-Regular</string>
+		<string>Karla-Bold</string>
+	</array>
 </dict>
 </plist>
