@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
             if let scoreData = UserDefaults.standard.integer(forKey: "SCORE") as Int?{
                     ViewController.highScore = scoreData
-                    highScoreLbl.text = "Your High Score: \(Int(ViewController.highScore!))"
+                    highScoreLbl.text = "High Score: \(Int(ViewController.highScore!))"
             } else {
                     ViewController.highScore = 0
                     highScoreLbl.text = "Press Play!"
