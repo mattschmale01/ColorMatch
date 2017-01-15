@@ -36,7 +36,6 @@ class GameViewController: UIViewController {
     var curColor: String = ""
     var deathCount = 0
     
-    
     // Color maps
     let colorNameMap = ["Blue", "Red", "Green", "Orange", "Yellow", "Pink", "Purple"]
     let colorHexMap = ["#0080ff", "#ff0000", "#00ff00", "#ffa500", "#ffff00", "#ff1493", "#9400d3"]
@@ -72,6 +71,7 @@ class GameViewController: UIViewController {
             playSound(fileName: "fail")
         }
     }
+    
     //Func: Plays a sound of our choice
     func playSound(fileName: String) {
         guard let sound = NSDataAsset(name: fileName) else {
@@ -91,8 +91,6 @@ class GameViewController: UIViewController {
         }
     }
     
-    
-    
     //Func: Updates Data
     func updateNSUserDefaults(score: Int){
         UserDefaults.standard.set(score, forKey:"SCORE")
@@ -105,6 +103,7 @@ class GameViewController: UIViewController {
             updateNSUserDefaults(score: CurrentScore)
         }
     }
+    
     //Func: Disables all the buttons
     func disableAllBtns(){
         yesBtn.isEnabled = false
@@ -116,6 +115,7 @@ class GameViewController: UIViewController {
         yesBtn.isEnabled = true
         noBtn.isEnabled = true
     }
+    
     //Func: Loads UI Updates
     func uiUpdates(){
         yesBtn.layer.cornerRadius = 5.0
@@ -149,11 +149,43 @@ class GameViewController: UIViewController {
     
     // Func: generates new text and color
     func newPlay() {
-        curText = colorNameMap[randInt(range: colorNameMap.count)]
-        colorLabel.text = curText
         
-        curColor = colorHexMap[randInt(range: colorHexMap.count)]
-        colorLabel.textColor = hexStringToUIColor(hex: curColor)
+        if (randInt(range: 2) == 0) {
+            // Generate random label and color
+            
+            // Sub-Func: Make sure that the color and text are different
+            var r1 = 0
+            var r2 = 0
+            func generateDifferentValues() {
+                r1 = randInt(range: colorNameMap.count)
+                r2 = randInt(range: colorNameMap.count)
+                
+                if (r1 == r2) {
+                    generateDifferentValues()
+                }
+            }
+            generateDifferentValues()
+            
+            // Assign color and label
+            curText = colorNameMap[r1]
+            colorLabel.text = curText
+            
+            curColor = colorHexMap[r2]
+            colorLabel.textColor = hexStringToUIColor(hex: curColor)
+            
+        } else {
+            // Generate matching label and color
+            
+            let setRange = randInt(range: colorNameMap.count);
+            
+            // Assign color and label
+            curText = colorNameMap[setRange]
+            colorLabel.text = curText
+            
+            curColor = colorHexMap[setRange]
+            colorLabel.textColor = hexStringToUIColor(hex: curColor)
+            
+        }
     }
     
     // Func: generates a random number
@@ -184,6 +216,7 @@ class GameViewController: UIViewController {
         )
     }
     
+    // Action Func: "No" button clicked
     @IBAction func noBtn(_ sender: Any) {
         if isAlive {
             if colorNameMap.index(of: curText) != colorHexMap.index(of: curColor) {
@@ -200,6 +233,7 @@ class GameViewController: UIViewController {
         }
     }
     
+    // Action Func: "Yes" button clicked
     @IBAction func yesBtn(_ sender: Any) {
         if isAlive {
             if colorNameMap.index(of: curText) == colorHexMap.index(of: curColor) {
