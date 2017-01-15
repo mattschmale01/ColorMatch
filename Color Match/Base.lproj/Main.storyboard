@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,6 +69,17 @@
                                     <action selector="showSettingsPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JwB-jO-vns"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y02-Hb-Ka7">
+                                <rect key="frame" x="288" y="14" width="68" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.83682912590000003" green="0.1245211735" blue="0.095406360920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showHelpPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iyx-v7-oXa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -129,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMk-ul-5tn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="770.46476761619192"/>
+            <point key="canvasLocation" x="-1026" y="679"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="3BN-1Y-twf">
@@ -184,7 +195,7 @@
                                 <rect key="frame" x="134" y="104" width="181" height="204"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KUn-TK-qh4">
-                                        <rect key="frame" x="0.0" y="0.0" width="181" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="59.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4c-ev-hxC">
                                                 <rect key="frame" x="0.0" y="0.0" width="181" height="36"/>
@@ -193,7 +204,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time remaining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knw-zo-URE">
-                                                <rect key="frame" x="0.0" y="36" width="181" height="24"/>
+                                                <rect key="frame" x="0.0" y="36" width="181" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -201,7 +212,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uX-Zg-GGH">
-                                        <rect key="frame" x="0.0" y="125" width="181" height="79"/>
+                                        <rect key="frame" x="0.0" y="124.5" width="181" height="79"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="68"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -251,10 +262,10 @@
             </objects>
             <point key="canvasLocation" x="1101.5999999999999" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Help View Pop Up Controller-->
         <scene sceneID="QyC-zH-aEX">
             <objects>
-                <viewController id="cy8-gy-U8V" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="helpPopUpID" id="cy8-gy-U8V" customClass="helpViewPopUpController" customModule="Color_Match" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k3t-Xs-PhC"/>
                         <viewControllerLayoutGuide type="bottom" id="kav-89-5NU"/>
@@ -262,16 +273,47 @@
                     <view key="view" contentMode="scaleToFill" id="HMM-lB-73D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help1" translatesAutoresizingMaskIntoConstraints="NO" id="m3m-z6-QcY">
+                                <rect key="frame" x="16" y="52" width="343" height="563"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="563" id="1n3-3D-n4W"/>
+                                    <constraint firstAttribute="width" constant="343" id="fWH-Ja-nTg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hb-z5-ore">
+                                <rect key="frame" x="274" y="28" width="85" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="JgK-fF-NsR"/>
+                                    <constraint firstAttribute="width" constant="85" id="aCz-cF-SXz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.68392795319999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCloseBtnPress:" destination="cy8-gy-U8V" eventType="touchUpInside" id="fAB-84-bcd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m3m-z6-QcY" firstAttribute="centerY" secondItem="HMM-lB-73D" secondAttribute="centerY" id="8et-MV-0em"/>
+                            <constraint firstItem="4hb-z5-ore" firstAttribute="trailing" secondItem="HMM-lB-73D" secondAttribute="trailingMargin" id="My0-2R-8FZ"/>
+                            <constraint firstItem="m3m-z6-QcY" firstAttribute="centerX" secondItem="HMM-lB-73D" secondAttribute="centerX" id="SBc-Lq-a32"/>
+                            <constraint firstItem="4hb-z5-ore" firstAttribute="top" secondItem="k3t-Xs-PhC" secondAttribute="bottom" constant="8" id="mtH-HI-FqM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Q1-Jg-99r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1026.4000000000001" y="-10.344827586206897"/>
         </scene>
     </scenes>
     <resources>
         <image name="check" width="64" height="64"/>
         <image name="helix" width="1176" height="680"/>
+        <image name="help1" width="750" height="1334"/>
         <image name="logo" width="536" height="84"/>
         <image name="mainbg" width="2560" height="1600"/>
         <image name="x" width="128" height="128"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C926CDD01E2C0F9800F820BF /* helpViewPopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926CDCF1E2C0F9800F820BF /* helpViewPopUpController.swift */; };
 		C947AF611DEF811C002E933C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947AF601DEF811C002E933C /* GameViewController.swift */; };
 		C9B3B6FD1DEE978100941CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */; };
 		C9B3B6FF1DEE978100941CD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6FE1DEE978100941CD5 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C926CDCF1E2C0F9800F820BF /* helpViewPopUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helpViewPopUpController.swift; sourceTree = "<group>"; };
 		C947AF601DEF811C002E933C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C9B3B6F91DEE978100941CD5 /* Color Match.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Match.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				C9B3B6FE1DEE978100941CD5 /* ViewController.swift */,
 				C947AF601DEF811C002E933C /* GameViewController.swift */,
 				D02588DC1E2C0C9500968A76 /* SettingsPopUpViewController.swift */,
+				C926CDCF1E2C0F9800F820BF /* helpViewPopUpController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 		C9B3B6FB1DEE978100941CD5 /* Color Match */ = {
 			isa = PBXGroup;
 			children = (
+				C9E80DD61E2C13F90025B1D6 /* Fonts */,
 				C947AF5F1DEF7FC4002E933C /* Controller */,
 				C947AF5E1DEF7FBC002E933C /* View */,
 				C947AF5C1DEF7FAB002E933C /* Model */,
@@ -156,6 +160,13 @@
 				C9B3B7211DEE978100941CD5 /* Info.plist */,
 			);
 			path = "Color MatchUITests";
+			sourceTree = "<group>";
+		};
+		C9E80DD61E2C13F90025B1D6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +237,7 @@
 				TargetAttributes = {
 					C9B3B6F81DEE977F00941CD5 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = R65TV9W4RF;
+						DevelopmentTeam = LLK9WYY77X;
 						ProvisioningStyle = Automatic;
 					};
 					C9B3B70F1DEE978100941CD5 = {
@@ -297,6 +308,7 @@
 				C9B3B6FF1DEE978100941CD5 /* ViewController.swift in Sources */,
 				C9B3B7051DEE978100941CD5 /* Color_Match.xcdatamodeld in Sources */,
 				D02588DD1E2C0C9500968A76 /* SettingsPopUpViewController.swift in Sources */,
+				C926CDD01E2C0F9800F820BF /* helpViewPopUpController.swift in Sources */,
 				C9B3B6FD1DEE978100941CD5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,7 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = R65TV9W4RF;
+				DEVELOPMENT_TEAM = LLK9WYY77X;
 				INFOPLIST_FILE = "Color Match/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -465,7 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = R65TV9W4RF;
+				DEVELOPMENT_TEAM = LLK9WYY77X;
 				INFOPLIST_FILE = "Color Match/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
