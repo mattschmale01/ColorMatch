@@ -26,6 +26,16 @@ class ViewController: UIViewController {
         self.view.addSubview(popUpVC.view)
         popUpVC.didMove(toParentViewController: self)
     }
+    
+    //Func: Shows help screen
+    @IBAction func showHelpPopUp(_ sender: Any) {
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "helpPopUpID") as! helpViewPopUpController
+        self.addChildViewController(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        popUpVC.didMove(toParentViewController: self)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
