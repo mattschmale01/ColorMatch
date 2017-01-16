@@ -58,7 +58,7 @@ class restartViewController: UIViewController {
     
     //Func: Sets up timer
     func setUpTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(restartViewController.enableCloseBtn), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(restartViewController.enableCloseBtn), userInfo: nil, repeats: false)
     }
     
     //Func: Enables close button

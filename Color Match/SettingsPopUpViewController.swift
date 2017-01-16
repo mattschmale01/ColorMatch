@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Foundation
 
 class SettingsPopUpViewController: UIViewController {
-
+    //IBOutlets
+    @IBOutlet weak var vibrationsSwitch: UISwitch!
+    @IBOutlet weak var soundSwitch: UISwitch!
+    @IBOutlet weak var difficultyBar: UISegmentedControl!
+    
     // Close popUp
     @IBAction func closePopUp(_ sender: Any) {
         self.removeAnimate()
@@ -24,14 +29,8 @@ class SettingsPopUpViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         self.showAnimate()
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func showAnimate()
     {
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -50,8 +49,19 @@ class SettingsPopUpViewController: UIViewController {
         }, completion: {
             (finished : Bool)  in
             if (finished) {
+                self.getMoveTime()
                 self.view.removeFromSuperview()
             }
         })
+    }
+    func getMoveTime(){
+        if difficultyBar.selectedSegmentIndex == 2 {
+            MOVETIME = 0.7
+        } else if difficultyBar.selectedSegmentIndex == 1 {
+            MOVETIME = 1.0
+        } else if difficultyBar.selectedSegmentIndex == 0 {
+            MOVETIME = 1.3
+        }
+        
     }
 }

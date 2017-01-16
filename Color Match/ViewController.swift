@@ -8,6 +8,8 @@
 
 import UIKit
 
+var MOVETIME: Double?
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var highScoreLbl: UILabel!

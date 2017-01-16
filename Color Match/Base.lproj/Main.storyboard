@@ -213,6 +213,11 @@
                             <constraint firstItem="HXn-lR-GJP" firstAttribute="leading" secondItem="DyG-zL-CBa" secondAttribute="leadingMargin" constant="2" id="rV2-9Q-ANr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="difficultyBar" destination="gNa-kk-rp6" id="416-go-XpH"/>
+                        <outlet property="soundSwitch" destination="QJZ-Os-huz" id="HG6-0F-WL4"/>
+                        <outlet property="vibrationsSwitch" destination="IMB-4z-muP" id="am4-gx-TVT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMk-ul-5tn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 import AudioToolbox
 
-
 class GameViewController: UIViewController {
     
     //Audio Variables
@@ -30,7 +29,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var resetBtn: CustomButton!
     
     // Declaring game variables
-    let MOVETIME = 1.0
     var score = 0
     var isAlive = true
     var timer: Timer!
@@ -56,6 +54,7 @@ class GameViewController: UIViewController {
         score = 0
         highScoreLbl.text = String(score)
         highScoreLbl.textColor = UIColor.black
+        checkMoveTime()
         currTime = MOVETIME
         startTimer()
         newPlay()
@@ -277,6 +276,12 @@ class GameViewController: UIViewController {
     @IBAction func onResetBtnPress(_ sender: Any) {
         loadGame()
         resetBtn.isEnabled = false
+    }
+    
+    func checkMoveTime(){
+        if MOVETIME == nil {
+            MOVETIME = 1.3
+        }
     }
     
     
