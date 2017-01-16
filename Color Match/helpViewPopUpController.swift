@@ -25,8 +25,6 @@ class helpViewPopUpController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         showAnimate()
-        imgView.layer.cornerRadius = 15.0
-        imgView.clipsToBounds = true
     }
     
     //Func: Runs animation

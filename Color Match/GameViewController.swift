@@ -10,10 +10,12 @@ import UIKit
 import AVFoundation
 import AudioToolbox
 
-class GameViewController: UIViewController {
 
+class GameViewController: UIViewController {
+    
     //Audio Variables
     var player: AVAudioPlayer?
+    
     
     // Connected labels
     @IBOutlet weak var colorLabel: UILabel!
@@ -25,6 +27,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var yesBtn: UIButton!
     @IBOutlet weak var noBtn: UIButton!
     @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var resetBtn: CustomButton!
     
     // Declaring game variables
     let MOVETIME = 1.0
@@ -47,6 +50,7 @@ class GameViewController: UIViewController {
         loadGame()
     }
     
+
     // Func: actions for onload
     func loadGame(){
         score = 0
@@ -98,29 +102,16 @@ class GameViewController: UIViewController {
     
     //Func: Checks to update HighScore
     func checkHighScore(CurrentScore: Int){
-        if (CurrentScore > ViewController.highScore!){
+        if (CurrentScore > ViewController.highScore!) {
             ViewController.highScore = CurrentScore
             updateNSUserDefaults(score: CurrentScore)
         }
     }
     
-    //Func: Disables all the buttons
-    func disableAllBtns(){
-        yesBtn.isEnabled = false
-        noBtn.isEnabled = false
-    }
-    
-    //Func:Enables all the buttons
-    func enableALlBtns(){
-        yesBtn.isEnabled = true
-        noBtn.isEnabled = true
-    }
-    
     //Func: Loads UI Updates
     func uiUpdates(){
-        yesBtn.layer.cornerRadius = 5.0
-        noBtn.layer.cornerRadius = 5.0
         backBtn.setTitleColor(UIColor.black, for: .normal)
+        resetBtn.isEnabled = false
     }
     
     // Func: adds points to high score label
@@ -145,6 +136,10 @@ class GameViewController: UIViewController {
         // Housekeeping
         backBtn.setTitleColor(UIColor.red, for: .normal)
         isAlive = false
+        
+        resetBtn.isEnabled = true
+        restartPopUp()
+        
     }
     
     // Func: generates new text and color
@@ -216,7 +211,7 @@ class GameViewController: UIViewController {
         )
     }
     
-    // Action Func: "No" button clicked
+    //Func: "No" button clicked
     @IBAction func noBtn(_ sender: Any) {
         if isAlive {
             if colorNameMap.index(of: curText) != colorHexMap.index(of: curColor) {
@@ -229,11 +224,11 @@ class GameViewController: UIViewController {
                 gameOver()
             }
         } else {
-            loadGame()
+           // loadGame()
         }
     }
     
-    // Action Func: "Yes" button clicked
+    //Func: "Yes" button clicked
     @IBAction func yesBtn(_ sender: Any) {
         if isAlive {
             if colorNameMap.index(of: curText) == colorHexMap.index(of: curColor) {
@@ -246,7 +241,7 @@ class GameViewController: UIViewController {
                 timeLeftLbl.text = ""
             }
         } else {
-            loadGame()
+           // loadGame()
         }
     }
     
@@ -269,4 +264,22 @@ class GameViewController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(GameViewController.countDown), userInfo: nil, repeats: true)
     }
+    
+    //Func: Send restart pop-up
+    func restartPopUp(){
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "restartPopUpID") as! restartViewController
+        self.addChildViewController(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+        popUpVC.didMove(toParentViewController: self)
+    }
+    
+    @IBAction func onResetBtnPress(_ sender: Any) {
+        loadGame()
+        resetBtn.isEnabled = false
+    }
+    
+    
+    
+    
 }

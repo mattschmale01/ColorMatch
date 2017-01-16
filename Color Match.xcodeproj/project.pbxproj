@@ -16,7 +16,6 @@
 		C946568B1E2C1BF200FC6C00 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946568A1E2C1BF200FC6C00 /* CustomButton.swift */; };
 		C946568D1E2C1F2100FC6C00 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946568C1E2C1F2100FC6C00 /* CustomView.swift */; };
 		C946568F1E2C250500FC6C00 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946568E1E2C250500FC6C00 /* CustomLabel.swift */; };
-		C94656931E2C3B6300FC6C00 /* restartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94656921E2C3B6300FC6C00 /* restartViewController.swift */; };
 		C947AF611DEF811C002E933C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947AF601DEF811C002E933C /* GameViewController.swift */; };
 		C9B3B6FD1DEE978100941CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */; };
 		C9B3B6FF1DEE978100941CD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B6FE1DEE978100941CD5 /* ViewController.swift */; };
@@ -26,6 +25,7 @@
 		C9B3B70A1DEE978100941CD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B3B7081DEE978100941CD5 /* LaunchScreen.storyboard */; };
 		C9B3B7151DEE978100941CD5 /* Color_MatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B7141DEE978100941CD5 /* Color_MatchTests.swift */; };
 		C9B3B7201DEE978100941CD5 /* Color_MatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3B71F1DEE978100941CD5 /* Color_MatchUITests.swift */; };
+		C9ED41E81E2C72D800760170 /* restartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ED41E71E2C72D800760170 /* restartViewController.swift */; };
 		D02588DD1E2C0C9500968A76 /* SettingsPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02588DC1E2C0C9500968A76 /* SettingsPopUpViewController.swift */; };
 		D06704DE1E2C3B7800E7AD3D /* Attributions.txt in Resources */ = {isa = PBXBuildFile; fileRef = D06704DD1E2C3B7800E7AD3D /* Attributions.txt */; };
 /* End PBXBuildFile section */
@@ -57,7 +57,6 @@
 		C946568A1E2C1BF200FC6C00 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C946568C1E2C1F2100FC6C00 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		C946568E1E2C250500FC6C00 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
-		C94656921E2C3B6300FC6C00 /* restartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = restartViewController.swift; sourceTree = "<group>"; };
 		C947AF601DEF811C002E933C /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		C9B3B6F91DEE978100941CD5 /* Color Match.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Color Match.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		C9B3B71B1DEE978100941CD5 /* Color MatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Color MatchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B3B71F1DEE978100941CD5 /* Color_MatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color_MatchUITests.swift; sourceTree = "<group>"; };
 		C9B3B7211DEE978100941CD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9ED41E71E2C72D800760170 /* restartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = restartViewController.swift; sourceTree = "<group>"; };
 		D02588DC1E2C0C9500968A76 /* SettingsPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPopUpViewController.swift; sourceTree = "<group>"; };
 		D06704DD1E2C3B7800E7AD3D /* Attributions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Attributions.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,9 +120,12 @@
 		C947AF5E1DEF7FBC002E933C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C9B3B7001DEE978100941CD5 /* Main.storyboard */,
+				C9B3B7081DEE978100941CD5 /* LaunchScreen.storyboard */,
 				C946568A1E2C1BF200FC6C00 /* CustomButton.swift */,
 				C946568C1E2C1F2100FC6C00 /* CustomView.swift */,
 				C946568E1E2C250500FC6C00 /* CustomLabel.swift */,
+				C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -134,7 +137,7 @@
 				C947AF601DEF811C002E933C /* GameViewController.swift */,
 				D02588DC1E2C0C9500968A76 /* SettingsPopUpViewController.swift */,
 				C926CDCF1E2C0F9800F820BF /* helpViewPopUpController.swift */,
-				C94656921E2C3B6300FC6C00 /* restartViewController.swift */,
+				C9ED41E71E2C72D800760170 /* restartViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -168,9 +171,6 @@
 				C947AF5F1DEF7FC4002E933C /* Controller */,
 				C947AF5E1DEF7FBC002E933C /* View */,
 				C947AF5C1DEF7FAB002E933C /* Model */,
-				C9B3B6FC1DEE978100941CD5 /* AppDelegate.swift */,
-				C9B3B7001DEE978100941CD5 /* Main.storyboard */,
-				C9B3B7081DEE978100941CD5 /* LaunchScreen.storyboard */,
 				C9B3B70B1DEE978100941CD5 /* Info.plist */,
 				C9B3B7031DEE978100941CD5 /* Color_Match.xcdatamodeld */,
 			);
@@ -347,7 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C94656931E2C3B6300FC6C00 /* restartViewController.swift in Sources */,
+				C9ED41E81E2C72D800760170 /* restartViewController.swift in Sources */,
 				C947AF611DEF811C002E933C /* GameViewController.swift in Sources */,
 				C946568F1E2C250500FC6C00 /* CustomLabel.swift in Sources */,
 				C9B3B6FF1DEE978100941CD5 /* ViewController.swift in Sources */,
