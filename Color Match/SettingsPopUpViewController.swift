@@ -10,12 +10,13 @@ import UIKit
 import Foundation
 
 class SettingsPopUpViewController: UIViewController {
+    
     //IBOutlets
     @IBOutlet weak var vibrationsSwitch: UISwitch!
     @IBOutlet weak var soundSwitch: UISwitch!
     @IBOutlet weak var difficultyBar: UISegmentedControl!
     
-    // Close popUp
+    // Close pop-up
     @IBAction func closePopUp(_ sender: Any) {
         self.removeAnimate()
     }
@@ -25,14 +26,15 @@ class SettingsPopUpViewController: UIViewController {
         self.removeAnimate()
     }
     
+    // Func: Actions for pop-up load
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         self.showAnimate()
     }
 
-    func showAnimate()
-    {
+    // Func: Animate pop-up into screen
+    func showAnimate() {
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         self.view.alpha = 0.0
         UIView.animate(withDuration: 0.25, animations: {
@@ -41,20 +43,31 @@ class SettingsPopUpViewController: UIViewController {
         })
     }
     
-    func removeAnimate()
-    {
+    // Func: Remove pop-up and preform closing actions
+    func removeAnimate() {
+        
+        // Animations
         UIView.animate(withDuration: 0.25, animations: {
             self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
             self.view.alpha = 0.0;
+            
+        // Closing functions
         }, completion: {
             (finished : Bool)  in
             if (finished) {
-                self.getMoveTime()
+                // Set user preferences
+                self.setMoveTime()
+                self.setSoundPreferences()
+                
+                // Close settings pop-up
                 self.view.removeFromSuperview()
             }
         })
     }
-    func getMoveTime(){
+    
+    
+    // Func: Sets move time preference
+    func setMoveTime() {
         if difficultyBar.selectedSegmentIndex == 2 {
             MOVETIME = 0.7
         } else if difficultyBar.selectedSegmentIndex == 1 {
@@ -62,6 +75,16 @@ class SettingsPopUpViewController: UIViewController {
         } else if difficultyBar.selectedSegmentIndex == 0 {
             MOVETIME = 1.3
         }
-        
+    }
+    
+    // Func: Sets sound and vibration preferences
+    func setSoundPreferences() {
+        if !soundSwitch.isOn {
+            IS_BUZZER_ON = false
+            IS_SOUND_ON = false
+        }
+        if !vibrationsSwitch.isOn {
+            IS_VIBRATE_ON = false
+        }
     }
 }

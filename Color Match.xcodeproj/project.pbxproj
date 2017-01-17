@@ -12,7 +12,7 @@
 		C94656821E2C19B100FC6C00 /* Karla-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C946567E1E2C19B100FC6C00 /* Karla-Italic.ttf */; };
 		C94656831E2C19B100FC6C00 /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C946567F1E2C19B100FC6C00 /* Karla-Regular.ttf */; };
 		C94656841E2C19B100FC6C00 /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94656801E2C19B100FC6C00 /* Karla-Bold.ttf */; };
-		C94656891E2C1BC600FC6C00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94656881E2C1BC600FC6C00 /* Constants.swift */; };
+		C94656891E2C1BC600FC6C00 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94656881E2C1BC600FC6C00 /* GlobalVariables.swift */; };
 		C946568B1E2C1BF200FC6C00 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946568A1E2C1BF200FC6C00 /* CustomButton.swift */; };
 		C946568D1E2C1F2100FC6C00 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946568C1E2C1F2100FC6C00 /* CustomView.swift */; };
 		C946568F1E2C250500FC6C00 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C946568E1E2C250500FC6C00 /* CustomLabel.swift */; };
@@ -53,7 +53,7 @@
 		C946567E1E2C19B100FC6C00 /* Karla-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Italic.ttf"; sourceTree = "<group>"; };
 		C946567F1E2C19B100FC6C00 /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
 		C94656801E2C19B100FC6C00 /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
-		C94656881E2C1BC600FC6C00 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C94656881E2C1BC600FC6C00 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		C946568A1E2C1BF200FC6C00 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C946568C1E2C1F2100FC6C00 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		C946568E1E2C250500FC6C00 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		C94656871E2C1BBC00FC6C00 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				C94656881E2C1BC600FC6C00 /* Constants.swift */,
+				C94656881E2C1BC600FC6C00 /* GlobalVariables.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 				TargetAttributes = {
 					C9B3B6F81DEE977F00941CD5 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = LLK9WYY77X;
+						DevelopmentTeam = R65TV9W4RF;
 						ProvisioningStyle = Automatic;
 					};
 					C9B3B70F1DEE978100941CD5 = {
@@ -355,7 +355,7 @@
 				C946568D1E2C1F2100FC6C00 /* CustomView.swift in Sources */,
 				D02588DD1E2C0C9500968A76 /* SettingsPopUpViewController.swift in Sources */,
 				C946568B1E2C1BF200FC6C00 /* CustomButton.swift in Sources */,
-				C94656891E2C1BC600FC6C00 /* Constants.swift in Sources */,
+				C94656891E2C1BC600FC6C00 /* GlobalVariables.swift in Sources */,
 				C926CDD01E2C0F9800F820BF /* helpViewPopUpController.swift in Sources */,
 				C9B3B6FD1DEE978100941CD5 /* AppDelegate.swift in Sources */,
 			);
@@ -510,11 +510,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = LLK9WYY77X;
+				DEVELOPMENT_TEAM = R65TV9W4RF;
 				INFOPLIST_FILE = "Color Match/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.Cunha1.Color-Match";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.Cunha2.Color-Match";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -526,11 +526,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = LLK9WYY77X;
+				DEVELOPMENT_TEAM = R65TV9W4RF;
 				INFOPLIST_FILE = "Color Match/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.Cunha1.Color-Match";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.Cunha2.Color-Match";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

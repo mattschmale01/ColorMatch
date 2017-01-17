@@ -8,7 +8,7 @@
 
 import UIKit
 
-var MOVETIME: Double?
+
 
 class ViewController: UIViewController {
 

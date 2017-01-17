@@ -77,20 +77,24 @@ class GameViewController: UIViewController {
     
     //Func: Plays a sound of our choice
     func playSound(fileName: String) {
-        guard let sound = NSDataAsset(name: fileName) else {
-            print("Asset not found")
-            return
-        }
         
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
+        // If sound option is turned on or unset, then play sound
+        if IS_SOUND_ON == nil || IS_SOUND_ON!  {
+            guard let sound = NSDataAsset(name: fileName) else {
+                print("Asset not found")
+                return
+            }
             
-            player = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeWAVE)
-            
-            player!.play()
-        } catch let error as NSError {
-            print("error: \(error.localizedDescription)")
+            do {
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try AVAudioSession.sharedInstance().setActive(true)
+                
+                player = try AVAudioPlayer(data: sound.data, fileTypeHint: AVFileTypeWAVE)
+                
+                player!.play()
+            } catch let error as NSError {
+                print("error: \(error.localizedDescription)")
+            }
         }
     }
     
@@ -124,8 +128,10 @@ class GameViewController: UIViewController {
     func gameOver() {
         checkDeath()
         
-        // Play sound and vibrate phone
-        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        // Play sound and vibrate phone if vibrate setting is turned on or unset
+        if IS_VIBRATE_ON == nil || IS_VIBRATE_ON! {
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        }
         
         // Update highscore info
         highScoreLbl.text = "Game over! Score: " + String(score)
