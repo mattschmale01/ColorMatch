@@ -40,13 +40,22 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-            if let scoreData = UserDefaults.standard.integer(forKey: "SCORE") as Int?{
-                    ViewController.highScore = scoreData
-                    highScoreLbl.text = "High Score: \(Int(ViewController.highScore!))"
-            } else {
-                    ViewController.highScore = 0
-                    highScoreLbl.text = "Press Play!"
-            }
+        
+        // Load NSUserDefault user preferences for the first and only time
+        if (USER_PREFERENCES.object(forKey: "MOVETIME") == nil) {
+            USER_PREFERENCES.set(1.3,  forKey: "MOVETIME")      // Movetime
+            USER_PREFERENCES.set(true, forKey: "IS_VIBRATE_ON") // Vibration
+            USER_PREFERENCES.set(true, forKey: "IS_BUZZER_ON")  // Buzzer Noise
+            USER_PREFERENCES.set(true, forKey: "IS_SOUND_ON")   // Sounds
+        }
+        
+        if let scoreData = UserDefaults.standard.integer(forKey: "SCORE") as Int?{
+                ViewController.highScore = scoreData
+                highScoreLbl.text = "High Score: \(Int(ViewController.highScore!))"
+        } else {
+                ViewController.highScore = 0
+                highScoreLbl.text = "Press Play!"
+        }
     }
 }
 

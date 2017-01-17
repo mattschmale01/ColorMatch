@@ -30,6 +30,7 @@ class GameViewController: UIViewController {
     
     // Declaring game variables
     var score = 0
+    var MOVETIME = USER_PREFERENCES.object(forKey:"MOVETIME") as! Double?
     var isAlive = true
     var timer: Timer!
     var currTime: Double?
@@ -54,7 +55,6 @@ class GameViewController: UIViewController {
         score = 0
         highScoreLbl.text = String(score)
         highScoreLbl.textColor = UIColor.black
-        checkMoveTime()
         currTime = MOVETIME
         startTimer()
         newPlay()
@@ -79,7 +79,7 @@ class GameViewController: UIViewController {
     func playSound(fileName: String) {
         
         // If sound option is turned on or unset, then play sound
-        if IS_SOUND_ON == nil || IS_SOUND_ON!  {
+        if (USER_PREFERENCES.object(forKey:"IS_SOUND_ON") as! Bool?)!  {
             guard let sound = NSDataAsset(name: fileName) else {
                 print("Asset not found")
                 return
@@ -129,7 +129,7 @@ class GameViewController: UIViewController {
         checkDeath()
         
         // Play sound and vibrate phone if vibrate setting is turned on or unset
-        if IS_VIBRATE_ON == nil || IS_VIBRATE_ON! {
+        if (USER_PREFERENCES.object(forKey:"IS_VIBRATE_ON") != nil) {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         
@@ -283,14 +283,4 @@ class GameViewController: UIViewController {
         loadGame()
         resetBtn.isEnabled = false
     }
-    
-    func checkMoveTime(){
-        if MOVETIME == nil {
-            MOVETIME = 1.3
-        }
-    }
-    
-    
-    
-    
 }

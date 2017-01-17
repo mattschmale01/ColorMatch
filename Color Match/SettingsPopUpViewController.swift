@@ -31,6 +31,26 @@ class SettingsPopUpViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
         self.showAnimate()
+        
+        // Change UI elements to selected settings
+        
+        // Sound switch
+        if !(USER_PREFERENCES.object(forKey:"IS_SOUND_ON") as! Bool?)! {
+            soundSwitch.setOn(false, animated: false)
+        }
+        // Vibration Switch
+        if !(USER_PREFERENCES.object(forKey:"IS_VIBRATE_ON") as! Bool?)! {
+            vibrationsSwitch.setOn(false, animated: false)
+        }
+        // Difficulty control
+        let difficulty:Double = (USER_PREFERENCES.object(forKey:"MOVETIME") as! Double?)!
+        if difficulty == 0.7 {
+            difficultyBar.selectedSegmentIndex = 2
+        } else if difficulty == 1.0 {
+            difficultyBar.selectedSegmentIndex = 1
+        } else if difficulty == 1.3 {
+            difficultyBar.selectedSegmentIndex = 0
+        }
     }
 
     // Func: Animate pop-up into screen
@@ -65,26 +85,25 @@ class SettingsPopUpViewController: UIViewController {
         })
     }
     
-    
     // Func: Sets move time preference
     func setMoveTime() {
         if difficultyBar.selectedSegmentIndex == 2 {
-            MOVETIME = 0.7
+            USER_PREFERENCES.set(0.7, forKey: "MOVETIME")
         } else if difficultyBar.selectedSegmentIndex == 1 {
-            MOVETIME = 1.0
+            USER_PREFERENCES.set(1.0, forKey: "MOVETIME")
         } else if difficultyBar.selectedSegmentIndex == 0 {
-            MOVETIME = 1.3
+            USER_PREFERENCES.set(1.3, forKey: "MOVETIME")
         }
     }
     
     // Func: Sets sound and vibration preferences
     func setSoundPreferences() {
         if !soundSwitch.isOn {
-            IS_BUZZER_ON = false
-            IS_SOUND_ON = false
+            USER_PREFERENCES.set(false, forKey: "IS_SOUND_ON")   // Sound
+            USER_PREFERENCES.set(false, forKey: "IS_BUZZER_ON")  // Buzzer
         }
         if !vibrationsSwitch.isOn {
-            IS_VIBRATE_ON = false
+            USER_PREFERENCES.set(false, forKey: "IS_VIBRATE_ON") // Vibration
         }
     }
 }
