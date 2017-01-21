@@ -11,6 +11,7 @@
 *.pbxproj
 *.xcworkspace
 xcuserdata
+Color\ Match.xcodeproj/project.pbxproj
 
 # Build products
 build/
