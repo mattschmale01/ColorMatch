@@ -54,7 +54,7 @@ class GameViewController: UIViewController {
     func loadGame(){
         score = 0
         highScoreLbl.text = String(score)
-        highScoreLbl.textColor = UIColor.black
+        highScoreLbl.textColor = UIColor.white
         currTime = MOVETIME
         startTimer()
         newPlay()
@@ -113,7 +113,7 @@ class GameViewController: UIViewController {
     
     //Func: Loads UI Updates
     func uiUpdates(){
-        backBtn.setTitleColor(UIColor.black, for: .normal)
+        backBtn.setTitleColor(UIColor.darkGray, for: .normal)
         resetBtn.isEnabled = false
     }
     
@@ -129,7 +129,7 @@ class GameViewController: UIViewController {
         checkDeath()
         
         // Play sound and vibrate phone if vibrate setting is turned on or unset
-        if (USER_PREFERENCES.object(forKey:"IS_VIBRATE_ON") != nil) {
+        if (USER_PREFERENCES.object(forKey:"IS_VIBRATE_ON") as! Bool?)! {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         }
         
@@ -139,7 +139,7 @@ class GameViewController: UIViewController {
         checkHighScore(CurrentScore: score)
         
         // Housekeeping
-        backBtn.setTitleColor(UIColor.red, for: .normal)
+        // backBtn.setTitleColor(UIColor.red, for: .normal)
         isAlive = false
         
         resetBtn.isEnabled = true

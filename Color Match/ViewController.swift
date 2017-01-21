@@ -57,5 +57,9 @@ class ViewController: UIViewController {
                 highScoreLbl.text = "Press Play!"
         }
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent //or default
+    }
 }
 
